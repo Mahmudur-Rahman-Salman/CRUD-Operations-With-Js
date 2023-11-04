@@ -11,6 +11,14 @@ form.addEventListener('submit', (e)=> {
     formValidation(); 
 })
 
+// formValidation function. This will help us prevent users from submitting blank input fields. 👇
 let formValidation = () => {
-    
+    if(input.value === ''){
+        msg.innerHTML = "Post cannot be empty"; 
+        console.log('failure'); 
+    }
+    else{
+        console.log("Success"); 
+        msg.innerHTML = ""; 
+    }
 }
