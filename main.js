@@ -6,7 +6,7 @@ let posts = document.getElementById('posts');
 
 form.addEventListener('submit', (e)=> {
     e.preventDefault(); 
-    console.log("button clicked"); 
+    // console.log("button clicked"); 
 
     formValidation(); 
 })
@@ -20,5 +20,14 @@ let formValidation = () => {
     else{
         console.log("Success"); 
         msg.innerHTML = ""; 
+        acceptData(); 
     }
+}
+
+// Accepting Data From Input Fields
+
+let data = {}; 
+let acceptData = () => {
+    data['text'] = input.value; 
+    console.log(data); 
 }
