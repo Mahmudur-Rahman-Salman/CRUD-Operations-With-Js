@@ -30,4 +30,19 @@ let data = {};
 let acceptData = () => {
     data['text'] = input.value; 
     console.log(data); 
+    createPost(); 
+}
+
+// creating post with template literals
+
+let createPost = () => {
+    posts.innerHTML +=`
+    <div>
+    <p>${data.text}</p>
+    <span class="options">
+      <i class="fas fa-edit"></i>
+      <i class="fas fa-trash-alt"></i>
+    </span>
+  </div>`
+  input.value = ''; 
 }
